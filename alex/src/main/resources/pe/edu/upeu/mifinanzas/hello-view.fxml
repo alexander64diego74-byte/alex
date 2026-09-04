@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.mifinanzas.FinanzasController">
+
+    <children>
+
+        <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+
+            <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="MI FINANZAS" />
+
+            <Label style="-fx-font-size: 16px;" text="Control de ingresos y gastos" />
+
+            <HBox spacing="10.0">
+
+                <TextField fx:id="txtDescripcion" prefWidth="200.0" promptText="Descripción" />
+
+                <TextField fx:id="txtMonto" prefWidth="120.0" promptText="Monto" />
+
+                <ComboBox fx:id="cmbTipo" prefWidth="130.0" promptText="Tipo" />
+
+                <Button onAction="#registrarMovimiento" prefWidth="110.0" text="Registrar" />
+
+                <Button onAction="#eliminarMovimiento" prefWidth="110.0" text="Eliminar" />
+
+            </HBox>
+
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Saldo actual:" />
+
+            <Label fx:id="lblSaldo" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="S/ 0.00" />
+
+            <TableView fx:id="tablaMovimientos" VBox.vgrow="ALWAYS">
+
+                <columns>
+
+                    <TableColumn fx:id="colFecha" prefWidth="150.0" text="Fecha" />
+
+                    <TableColumn fx:id="colDescripcion" prefWidth="250.0" text="Descripción" />
+
+                    <TableColumn fx:id="colTipo" prefWidth="150.0" text="Tipo" />
+
+                    <TableColumn fx:id="colMonto" prefWidth="206.4000244140625" text="Monto" />
+
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>
